@@ -1,12 +1,4 @@
 /* Global styles for the entire website */
-body {
-    background-image: url("C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//editedpic2.jpg"); /* Adjust the path to your background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 550px; /* Adjust the value based on the height of your navigation bar */
-}
-
 /* Your navigation bar styles */
 .w3-bar-item {
     margin-right: 20px; /* Adjust the margin-right value to control spacing */
@@ -23,8 +15,18 @@ body {
     flex: 1;
     text-align: center;
 }
-/* Centered Heading Styles */
-.centered-heading {
+
+/*Homepage Styles*/
+body.homepage {
+    background-image: url("C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//editedpic2.jpg"); /* Adjust the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 550px; /* Adjust the value based on the height of your navigation bar */
+}
+
+/* Kessoku Band Heading Styles */
+body.homepage .centered-heading {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -33,7 +35,7 @@ body {
     padding-bottom: 40px; /* Add space between centered heading and background image */
 }
 
-.centered-heading h1 {
+body.homepage .centered-heading h1 {
     font-family: 'Joti One', serif;
     font-size: 5em;
     font-weight: 700; /* Adjust the font weight as needed */
@@ -44,7 +46,7 @@ body {
 }
 
 /* About Us Section Styles */
-.about-section {
+body.homepage .about-section {
     background-color: black;
     color: white;
     padding: 40px;
@@ -56,20 +58,20 @@ body {
     justify-content: center; /* Center content horizontally */
 }
 
-.about-content {
+body.homepage .about-content {
     flex: 1;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.about-content h2 {
+body.homepage .about-content h2 {
     font-family: 'Joti One', serif;
     font-size: 2.5em;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.about-content p {
+body.homepage .about-content p {
     font-family: 'Jomhuria', serif;
     font-size: 2em;
     line-height: 1.3;
@@ -79,14 +81,136 @@ body {
 }
 
 /* Gif Container Styles */
-.gif-container {
+body.homepage .gif-container {
     margin: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.gif-container img {
+body.homepage .gif-container img {
     max-width: 200px;
     height: auto;
 }
+
+/* Tour Page Styles */
+body.tour .tour-info-section {
+    position: relative;
+    background-image: url("C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Screenshot 2023-11-30 230032.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 820px; /* Adjust the height as needed */
+    margin-top: 20px; /* Adjust the margin-top value based on your design */
+}
+
+body.tour .tour-info-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,1) 100%);
+}
+
+body.tour .tour-info-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensure the content is above the gradient overlay */
+}
+
+body.tour .tour-info-content h2 {
+    font-family: 'Joti One', serif;
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+body.tour .tour-info-content p {
+    font-family: 'Jomhuria', serif;
+    font-size: 2em;
+    line-height: 1.5;
+}
+
+/* Tour Section Styles */
+body.tour .tour-section {
+    background-color: black; /* Adjust the background color as needed */
+    padding: 40px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+body.tour .tour-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.tour .tour-content h2 {
+    font-family: 'Joti One', serif;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+body.tour h3 {
+    font-family: 'Jomhuria', serif;
+    font-size: 4em;
+    font-weight: 700;
+    color: white;
+}
+
+body.tour .tour-content p {
+    font-family: 'Jomhuria', serif;
+    color: white;
+    font-size: 2em;
+    line-height: 1;
+}
+
+body.tour .two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping to handle smaller screens */
+}
+
+body.tour .tour-dates,
+body.tour .setlist {
+    box-sizing: border-box;
+    width: 48%; /* Adjust as needed */
+    padding: 0 10px; /* Add padding for spacing */
+}
+
+body.tour .setlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body.tour .setlist ul li {
+    font-family: 'Jomhuria', serif;
+    color: white;
+    font-size: 2em; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+body.tour .tour-dates .tour-date {
+    text-align: center;
+}
+
+body.tour .tour-dates .tour-date .general-admission {
+    font-size: 3em; /* Adjust the font size as needed */
+    margin-top: 10px; /* Add spacing between the location and general admission */
+}
+
+body.tour .call-to-action {
+    text-align: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+body.tour .call-to-action p {
+    font-size: 2.5em; /* Adjust the font size as needed */
+}
+
+
+/*Shop Styles*/
