@@ -1,46 +1,61 @@
-// script.js
+// Get all the navigation buttons
+const navButtons = document.querySelectorAll('.w3-bar-item');
 
-const cart = [];
+// Add event listeners to each button
+navButtons.forEach(button => {
+    button.addEventListener('mouseenter', addGlow);
+    button.addEventListener('mouseleave', removeGlow);
+});
 
-function addToCart(itemName, price) {
-    cart.push({ itemName, price });
-    console.log(`Added ${itemName} to cart. Cart:`, cart);
+// Function to add glow effect
+function addGlow() {
+    this.classList.add('glow');
 }
 
-function showCart() {
-    const cartItemsList = document.getElementById('cartItems');
-    cartItemsList.innerHTML = '';
-
-    cart.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${item.itemName} - ${item.price}`;
-        cartItemsList.appendChild(listItem);
-    });
-
-    const modal = document.getElementById('cartModal');
-    modal.style.display = 'block';
+// Function to remove glow effect
+function removeGlow() {
+    this.classList.remove('glow');
 }
 
-function closeCart() {
-    const modal = document.getElementById('cartModal');
-    modal.style.display = 'none';
+
+// Get all social icons
+const socialIcons = document.querySelectorAll('.social-icon');
+
+// Add event listeners to each social icon
+socialIcons.forEach(icon => {
+    icon.addEventListener('mouseenter', addHoverEffect);
+    icon.addEventListener('mouseleave', removeHoverEffect);
+});
+
+// Function to add hover effect
+function addHoverEffect() {
+    this.classList.add('hover');
 }
 
-// Calculate and display total price
-function calculateTotalPrice() {
-    const totalElement = document.getElementById('totalPrice');
-    const total = cart.reduce((acc, item) => acc + parseInt(item.price), 0);
-    totalElement.textContent = `Total: ¥${total}`;
+// Function to remove hover effect
+function removeHoverEffect() {
+    this.classList.remove('hover');
 }
 
-function checkout() {
-    window.location.href = 'checkout.html';
-}
 
-// Close the modal if the user clicks outside of it
-window.onclick = function (event) {
-    const modal = document.getElementById('cartModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
+function toggleDropdown() {
+    var dropdownContent = document.getElementById("socialMediaContent");
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
     }
-};
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.w3-button')) {
+        var dropdowns = document.getElementsByClassName("w3-dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+}

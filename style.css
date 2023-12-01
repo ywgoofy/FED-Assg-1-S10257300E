@@ -1,6 +1,17 @@
 /* Global styles for the entire website */
 /* Your navigation bar styles */
 .w3-bar-item {
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Add smooth transition for transform */
+}
+
+.w3-bar-item:hover {
+    transform: translateY(-5px); /* Adjust the levitation height as needed */
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.w3-bar-item {
     margin-right: 20px; /* Adjust the margin-right value to control spacing */
 }
 
@@ -16,14 +27,71 @@
     text-align: center;
 }
 
+.w3-bar-item.glow {
+    /* Define the glow effect */
+    box-shadow: 0 0 12px rgb(248, 63, 186); /* Adjust the color and size as needed */
+    transition: box-shadow 0.3s ease; /* Add a smooth transition */
+}
+
+ 
 /*Homepage Styles*/
 body.homepage {
-    background-image: url("C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//editedpic2.jpg"); /* Adjust the path to your background image */
+    background-image: url("home\ background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 550px; /* Adjust the value based on the height of your navigation bar */
 }
+
+
+
+
+body.homepage .social-icons {
+    position: absolute;
+    top: 60px; /* Adjust the top distance as needed */
+    right: 20px; /* Adjust the right distance as needed */
+    display: flex;
+}
+
+body.homepage .social-icon {
+    display: inline-block;
+    width: 40px; /* Adjust the icon size as needed */
+    height: 40px;
+    margin-right: 10px; /* Adjust the spacing between icons as needed */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+body.homepage .social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body.homepage .social-icon {
+    display: inline-block;
+    width: 40px; /* Adjust the icon size as needed */
+    height: 40px;
+    margin-right: 10px; /* Adjust the spacing between icons as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions for transform and box-shadow */
+}
+
+body.homepage .social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body.homepage .social-icon.hover {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle box-shadow on hover */
+}
+
+
 
 /* Kessoku Band Heading Styles */
 body.homepage .centered-heading {
@@ -93,10 +161,11 @@ body.homepage .gif-container img {
     height: auto;
 }
 
+
 /* Tour Page Styles */
 body.tour .tour-info-section {
     position: relative;
-    background-image: url("C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Screenshot 2023-11-30 230032.png");
+    background-image: url("tour\ background\ pic.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -216,7 +285,7 @@ body.tour .call-to-action p {
 
 /* Merchandise Section Styles */
 body.merchandise .merchandise-section {
-    background-image:url("C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//05203dc2cd9163728a84c9909502a0cd.jpg");
+    background-image:url("merch\ background\ pic.jpg");
     padding: 40px; /* Adjust padding as needed */
     text-align: center;
 }
@@ -257,6 +326,22 @@ body.merchandise .merchandise-item img {
     height: auto;
 }
 
+.merchandise-item button {
+    font-size: 1em;
+    padding: 3px 10px;
+    background-color: #bc2594;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.merchandise-item button:hover {
+    background-color: #831b8e; /* Adjust the hover color as needed */
+}
+
+
 body.merchandise .checkout-button {
     font-family:'Jomhuria', serif;
     text-align: center;
@@ -264,37 +349,110 @@ body.merchandise .checkout-button {
 }
 
 body.merchandise .checkout-button button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    background-color: #57146c;
+    font-size: 2em;
+    padding: 5px 15px;
+    background-color: rgb(127, 39, 153);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition */
 }
 
-/* Cart Modal Styles */
-body.merchandise #cartModal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
+body.merchandise .checkout-button button:hover {
+    background-color: #57146c; /* Adjust the hover color as needed */
+}
+
+
+body.music-page {
+    background-image: url("music\ background\ 3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-body.merchandise .modal-content {
-    background: #333;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 400px;
-    margin: 0 auto;
-    overflow-y: auto;
+.album-text {
+    margin: 20px;
+    text-align: center;
+    font-family: 'Joti One', serif;;
+    color: rgb(0, 0, 0);
+    font-size: 3.5em;
 }
 
-body.merchandise .modal-content h2 {
-    color: rgb(48, 48, 48);
+.album-gif img {
+    max-width: 100%;
+    height: auto;
+}
+
+.playlist {
+    margin-top: 20px;
+}
+
+
+/* Responsive Styles for Homepage */
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 576px) {
+    body.homepage .homepage-section {
+        background-image: url("phone\ background.jpg");
+        /* Add other styles specific to smaller screens */
+    }
+
+    body.homepage .social-icons {
+        top: 20px;
+    }
+
+    body.homepage .social-icons .social-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    body.homepage .centered-heading h1 {
+        font-size: 3em;
+    }
+
+    body.homepage .about-section {
+        padding: 20px;
+    }
+
+    body.homepage .about-content h2 {
+        font-size: 2em;
+    }
+
+    body.homepage .about-content p {
+        font-size: 1.5em;
+    }
+
+    body.homepage .gif-container img {
+        max-width: 150px;
+    }
+}
+
+/* Further adjustments for even smaller screens if needed */
+@media screen and (max-width: 400px) {
+    body.homepage .centered-heading h1 {
+        font-size: 2.5em;
+    }
+
+    body.homepage .about-section {
+        padding: 10px;
+    }
+
+    body.homepage .about-content h2 {
+        font-size: 1.8em;
+    }
+
+    body.homepage .about-content p {
+        font-size: 1.2em;
+    }
+
+    body.homepage .gif-container img {
+        max-width: 120px;
+    }
 }

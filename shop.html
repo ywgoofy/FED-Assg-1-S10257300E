@@ -15,15 +15,10 @@
 <body class="merchandise">
 
     <div class="w3-top w3-bar w3-black">
-        <a href="#music" class="w3-bar-item w3-button">Music</a>
+        <a href="music.html" class="w3-bar-item w3-button">Music</a>
         <a href="tour.html" class="w3-bar-item w3-button">Tour</a>
         <a href="homepage.html" class="w3-bar-item w3-button">Home</a>
         <a href="shop.html" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    </div>
-
-    <div class="w3-right">
-        <button onclick="showCart()">Cart</button>
     </div>
 
     <section class="merchandise-section">
@@ -31,70 +26,62 @@
             <h2>Kessoku Band Merchandise</h2>
             <div class="merchandise-items">
                 <div class="merchandise-item">
-                    <img src="C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Merch//Kessoku Band Tee.jpg" alt="Merchandise Item 1">
+                    <img src="Merch/Kessoku Band Tee.jpg">
                     <h3>Kessoku Band Tee</h3>
                     <p>Classic Band tee for everyone</p>
                     <p>Price: ¥1,700</p>
-                    <button onclick="addToCart('Kessoku Band Tee', 1700)">Add to Cart</button>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="merchandise-item">
-                    <img src="C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Merch//Kessoku Band Poster.jpg" alt="Merchandise Item 2">
+                    <img src="Merch/Kessoku Band Poster.jpg">
                     <h3>Kessoku Band Poster</h3>
                     <p>Perfect for your wall</p>
                     <p>Price: ¥2,200</p>
-                    <button onclick="addToCart('Kessoku Band Poster', 2200)">Add to Cart</button>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="merchandise-item">
-                    <img src="C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Merch//Kessoku Band hoodie.jpg" alt="Merchandise Item 3">
+                    <img src="Merch/Kessoku Band hoodie.jpg">
                     <h3>Kessoku Hoodie</h3>
                     <p>Perfect on a cold day</p>
                     <p>Price: ¥3,300</p>
-                    <button onclick="addToCart('Kessoku Band Hoodie', 3300)">Add to Cart</button>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="merchandise-item">
-                    <img src="C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Merch//sg-11134201-22120-7e1s5j8qzflv3b.jpeg" alt="Merchandise Item 4">
+                    <img src="Merch/Kessoku Band Shorts.jpeg">
                     <h3>Kessoku Band Shorts</h3>
-                    <p>to complete the set</p>
+                    <p>To complete the set</p>
                     <p>Price: 1,700</p>
-                    <button onclick="addToCart('Kesoku Band Shorts', 1700)">Add to Cart</button>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="merchandise-item">
-                    <img src="C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Merch//Bocchi's Jacket.jpg" alt="Merchandise Item 5">
+                    <img src="Merch/Bocchi's Jacket.jpg">
                     <h3>Bocchi's Jacket</h3>
                     <p>Embrace your inner Bocchi</p>
                     <p>Price: 4,100</p>
-                    <button onclick="addToCart('Bocchi Jacket', 4100)">Add to Cart</button>
+                    <button>Add to Cart</button>
                 </div>
 
                 <div class="merchandise-item">
-                    <img src="C://Users//tanye//OneDrive - Ngee Ann Polytechnic//SEM 2//FED//Assg 1//FED ASG 1 S10257300E//Merch//Seishun Complex CD.png" alt="Merchandise Item 5">
+                    <img src="Merch/Seishun Complex CD.png">
                     <h3>Seishun Complex CD</h3>
                     <p>Have your favourite song's CD</p>
                     <p>Price: 5,500</p>
-                    <button onclick="addToCart('Seishun Complex CD', 5500)">Add to Cart</button>
+                    <button>Add to Cart</button>
                 </div>
 
             </div>
         </div>
         <!-- Checkout Button -->
         <div class="checkout-button">
-            <button onclick="checkout()">Checkout</button>
+            <button>Checkout</button>
         </div>
         
-        <!-- Cart Modal -->
-        <div id="cartModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeCart()">&times;</span>
-                <h2>Shopping Cart</h2>
-                <ul id="cartItems"></ul>
-            </div>
-        </div>
+
     </section>
 
 </body>
-
 </html>
