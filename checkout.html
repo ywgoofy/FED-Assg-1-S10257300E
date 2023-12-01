@@ -1,0 +1,45 @@
+<!-- checkout.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kessoku Band - Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+</head>
+
+<body class="checkout">
+
+    <div class="w3-top w3-bar w3-black">
+        <a href="#music" class="w3-bar-item w3-button">Music</a>
+        <a href="tour.html" class="w3-bar-item w3-button">Tour</a>
+        <a href="homepage.html" class="w3-bar-item w3-button">Home</a>
+        <a href="shop.html" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+
+    <section class="checkout-section">
+        <div class="checkout-content">
+            <h2>Checkout</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: ¥ <span id="totalPrice"></span></p>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            calculateTotalPrice();
+        });
+    </script>
+
+</body>
+
+</html>
