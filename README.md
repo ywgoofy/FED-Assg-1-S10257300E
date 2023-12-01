@@ -11,8 +11,8 @@ DESIGN PROCESS
 I began the design process by conducting user research to better understand the needs of Kessoku Band's fans and potential fans. I also researched the websites of other bands in order to identify best practices and trends.
 
 Based on my research, I created a set of user personas to represent the different types of users who would be visiting the website. I then used these personas to inform my design decisions.
-1. As a fan of Kessoku Band, I want to learn more about the band and their music, so that I can connect with them on a deeper level.
-2. As a potential fan of Kessoku Band, I want to discover their music and find out if I like it, so that I can become a fan.
+1. As a fan of Kessoku Band, I want to kno when their tour is happening, where and how much it will cost.
+2. As a potential fan of Kessoku Band, I want to discover their music and social media handles to find out if I like the music and what they do, so that I can become a fan.
 
 I next created a series of wireframes to map out the structure and layout of the website. I also created a style guide to define the website's color palette, fonts, and typography.
 
@@ -24,22 +24,13 @@ FEATURES
 
 Existing Features:
 
-A homepage with an "about us" section and a section to talk about their latest album
+A homepage with an "about us" section and navigation bar. Their social media handles are also linked to icon buttons below the navigation bar
 
-A Newsletter page that allows the fans to sign up to receive future updates, discounts and more
+A merchandise page for fans to purchase kessoku bands merchandise
 
-A Hamburger menu located at the side of the home page that allows easy accessability throughout the website
+A music page that displays their latest albums for fans to listen to
 
-Features left to implement:
-
-A proper merchandise page for fans to purchase their merchandise
-
-A discography page to purchase their music
-
-A contact page where fans can book the band for shows
-
-Links to redirect fans to the bands social media platforms
-
+A tour page to let fans know what the tour has, where its taking place and how much the tickets cost.
 
 TECHNOLOGIES USED
 
